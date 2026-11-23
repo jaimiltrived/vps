@@ -1,0 +1,86 @@
+[{"stream_name":"stderr","time":6.788168998,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.78821623,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.788225744,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.788228258,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.344206666,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.344237375,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.344242609,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.344246861,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.418778452,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":8.419559629,"data":"  🚀 INITIALIZING YOUR PERSONAL KAGGLE VPS...\n"}
+,{"stream_name":"stdout","time":8.420296761,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":8.420994817,"data":"[1/3] Installing required packages (FastAPI, Uvicorn, psutil)...\n"}
+,{"stream_name":"stdout","time":10.737585151,"data":"[2/3] Extracting VPS Controller and Web Interface...\n"}
+,{"stream_name":"stdout","time":10.73861475,"data":"[3/3] Starting VPS Controller daemon with Cloudflare tunnel...\n"}
+,{"stream_name":"stdout","time":11.658495721,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":11.659469525,"data":"      🚀 KAGGLE VPS MASTER COCKPIT INITIALIZING...\n"}
+,{"stream_name":"stdout","time":11.660411973,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":12.659248658,"data":"\n"}
+,{"stream_name":"stdout","time":12.660136755,"data":"[*] Establishing secure Cloudflare public tunnel...\n"}
+,{"stream_name":"stdout","time":12.661050057,"data":"[*] Downloading cloudflared binary (high-speed)...\n"}
+,{"stream_name":"stdout","time":13.178458889,"data":"[✓] cloudflared downloaded successfully.\n"}
+,{"stream_name":"stdout","time":13.658945040999999,"data":"[*] [AUTO-PROVISION] Setting up Node.js, Ollama \u0026 LLaMA 3.2 on Port 8008...\n"}
+,{"stream_name":"stdout","time":17.257931461,"data":"\n"}
+,{"stream_name":"stdout","time":17.258871801,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":17.259815618,"data":"  🎉 YOUR KAGGLE VPS MASTER COCKPIT IS LIVE!\n"}
+,{"stream_name":"stdout","time":17.260791135,"data":"  👉 PUBLIC URL: https://extent-mem-acquisition-vacations.trycloudflare.com\n"}
+,{"stream_name":"stdout","time":17.262873024,"data":"=================================================================\n"}
+,{"stream_name":"stdout","time":17.263584597,"data":"\n"}
+,{"stream_name":"stdout","time":28.06204562,"data":"W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)\n"}
+,{"stream_name":"stdout","time":49.648599944,"data":"[*] [AUTO-PROVISION] Launching Cloudflare tunnel for LLaMA 3.2 (Port 8008)...\n"}
+,{"stream_name":"stdout","time":53.640135888,"data":"  🤖 LLaMA 3.2 AI ENDPOINT: https://curves-extends-glasses-submitting.trycloudflare.com\n"}
+,{"stream_name":"stdout","time":202.413833393,"data":"ERROR:    Exception in ASGI application\n"}
+,{"stream_name":"stdout","time":202.415012973,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":202.416072075,"data":"  File \"/usr/local/lib/python3.13/dist-packages/uvicorn/protocols/websockets/websockets_sansio_impl.py\", line 409, in run_asgi\n"}
+,{"stream_name":"stdout","time":202.417027372,"data":"    result = await self.app(self.scope, self.receive, self.send)\n"}
+,{"stream_name":"stdout","time":202.418005395,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":202.418937304,"data":"  File \"/usr/local/lib/python3.13/dist-packages/uvicorn/middleware/proxy_headers.py\", line 63, in __call__\n"}
+,{"stream_name":"stdout","time":202.419926913,"data":"    return await self.app(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.420957942,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":202.421906064,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/applications.py\", line 1163, in __call__\n"}
+,{"stream_name":"stdout","time":202.422770201,"data":"    await super().__call__(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.423717949,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/applications.py\", line 96, in __call__\n"}
+,{"stream_name":"stdout","time":202.424621502,"data":"    await self.middleware_stack(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.42575524,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/middleware/errors.py\", line 151, in __call__\n"}
+,{"stream_name":"stdout","time":202.426905781,"data":"    await self.app(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.427775932,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/middleware/cors.py\", line 79, in __call__\n"}
+,{"stream_name":"stdout","time":202.42872074,"data":"    await self.app(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.429638578,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n"}
+,{"stream_name":"stdout","time":202.430640917,"data":"    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.431544475,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n"}
+,{"stream_name":"stdout","time":202.432395944,"data":"    raise exc\n"}
+,{"stream_name":"stdout","time":202.433304968,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n"}
+,{"stream_name":"stdout","time":202.434170222,"data":"    await app(scope, receive, sender)\n"}
+,{"stream_name":"stdout","time":202.435103724,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n"}
+,{"stream_name":"stdout","time":202.435987254,"data":"    await self.app(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.436700545,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/routing.py\", line 678, in __call__\n"}
+,{"stream_name":"stdout","time":202.437381442,"data":"    await self.middleware_stack(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.438037636,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/routing.py\", line 2734, in app\n"}
+,{"stream_name":"stdout","time":202.438812746,"data":"    await route.handle(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.439473563,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/routing.py\", line 358, in handle\n"}
+,{"stream_name":"stdout","time":202.440178363,"data":"    await self.app(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.44091242,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/routing.py\", line 184, in app\n"}
+,{"stream_name":"stdout","time":202.441637324,"data":"    await wrap_app_handling_exceptions(app, session)(scope, receive, send)\n"}
+,{"stream_name":"stdout","time":202.442306251,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n"}
+,{"stream_name":"stdout","time":202.443012855,"data":"    raise exc\n"}
+,{"stream_name":"stdout","time":202.443754655,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n"}
+,{"stream_name":"stdout","time":202.444437725,"data":"    await app(scope, receive, sender)\n"}
+,{"stream_name":"stdout","time":202.445337196,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/routing.py\", line 181, in app\n"}
+,{"stream_name":"stdout","time":202.446564404,"data":"    await func(session)\n"}
+,{"stream_name":"stdout","time":202.447377902,"data":"  File \"/usr/local/lib/python3.13/dist-packages/fastapi/routing.py\", line 796, in app\n"}
+,{"stream_name":"stdout","time":202.448208921,"data":"    await dependant.call(**solved_result.values)\n"}
+,{"stream_name":"stdout","time":202.448961762,"data":"  File \"/tmp/kaggle_vps_server.py\", line 755, in websocket_terminal\n"}
+,{"stream_name":"stdout","time":202.449742296,"data":"    message = await websocket.receive()\n"}
+,{"stream_name":"stdout","time":202.450467118,"data":"              ^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":202.451258957,"data":"  File \"/usr/local/lib/python3.13/dist-packages/starlette/websockets.py\", line 63, in receive\n"}
+,{"stream_name":"stdout","time":202.451987805,"data":"    raise WebSocketDisconnected('Cannot call \"receive\" once a disconnect message has been received.')\n"}
+,{"stream_name":"stdout","time":202.452789932,"data":"starlette.websockets.WebSocketDisconnected: Cannot call \"receive\" once a disconnect message has been received.\n"}
+,{"stream_name":"stderr","time":207.443739848,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":207.443773924,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":207.625111787,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":207.625140295,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":208.445202232,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":208.527065898,"data":"[NbConvertApp] Writing 141280 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":211.893193322,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":212.718646196,"data":"[NbConvertApp] Writing 417964 bytes to __results__.html\n"}
+]

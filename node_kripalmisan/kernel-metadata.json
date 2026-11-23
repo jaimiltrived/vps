@@ -1,0 +1,11 @@
+{
+  "id": "kripalmisan/vps-node-4",
+  "title": "vps-node-4",
+  "code_file": "Kaggle_VPS_Dashboard.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true
+}
