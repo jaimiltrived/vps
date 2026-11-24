@@ -1,160 +1,109 @@
 <div align="center">
 
-# 🚀 100% Free Cloud VPS Supercomputer
-### *Runs in Google Cloud with Tesla T4 GPU (16 GB VRAM), 13 GB RAM, Root Linux Terminal & Security Firewall*
+# 🚀 Tri-Cloud Hybrid VPS & Smart Switch Engine
+### *Next-Gen Open-Source Cloud VPS Cockpit with Dynamic Multi-Cloud GPU Switching & Security Firewall*
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)
-[![Permanent Live Gateway](https://img.shields.io/badge/Live%20Gateway-jaimiltrived.github.io%2Fvps-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://jaimiltrived.github.io/vps/)
+[![Live Gateway](https://img.shields.io/badge/Live%20Gateway-jaimiltrived.github.io%2Fvps-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://jaimiltrived.github.io/vps/)
 [![Tesla T4 GPU](https://img.shields.io/badge/Hardware-Tesla%20T4%20(16GB%20VRAM)-76b900?style=for-the-badge&logo=nvidia&logoColor=white)](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)
-[![RAM Pool](https://img.shields.io/badge/Memory-120%20GB%20Cluster%20RAM-06b6d4?style=for-the-badge)](https://jaimiltrived.github.io/vps/)
-[![Automation](https://img.shields.io/badge/24%2F7%20Cloud%20Rotation-GitHub%20Actions-22c55e?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/jaimiltrived/vps/actions)
+[![Security Firewall](https://img.shields.io/badge/Security-Firewall%20%26%20Brute--Force%20Shield-emerald?style=for-the-badge&logo=securityscorecard&logoColor=white)](https://github.com/jaimiltrived/vps)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg?style=for-the-badge)](LICENSE)
 
 <br/>
 
-**[🌐 Open Live VPS Gateway](https://jaimiltrived.github.io/vps/)** • **[⚡ Quickstart](#-quickstart-guide)** • **[🤖 AI Endpoint (Port 8008)](#-built-in-llama-32-ai-server-port-8008)** • **[⭐ Star on GitHub](https://github.com/jaimiltrived/vps)**
+**[⚡ Launch 1-Click Cloud VPS](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)** • **[🌐 Open Live Gateway](https://jaimiltrived.github.io/vps/)** • **[⭐ Star on GitHub](https://github.com/jaimiltrived/vps)** • **[🍴 Fork & Use Your Own Account](#-how-to-use-with-your-own-account)**
+
+<br/>
+
+<img src="docs/dashboard_preview.jpg" alt="Cloud VPS Master Cockpit with Smart Switch Interface" width="950" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid #334155;" />
 
 </div>
 
 ---
 
-## 🌟 Overview
+## 🌟 What is Tri-Cloud Hybrid VPS?
 
-**Kaggle VPS Supercluster** is an enterprise-grade cloud development environment and GPU computing cluster built entirely on top of free Kaggle instances. It breaks through the traditional 12-hour session limits and 30-minute idle disconnects by combining:
+**Tri-Cloud Hybrid VPS** is an open-source, ban-free personal cloud development environment and GPU computing workstation. It solves the common limitations of free cloud providers (session timeouts, resource bans, changing links) by introducing a **Smart Switch Interface** that seamlessly bridges three cloud layers:
 
-1. **4-Account Unified Supercluster:** Pools 4 Kaggle accounts to unlock **120 weekly GPU hours**, **16 CPU Cores**, and **120 GB RAM**.
-2. **24/7 Cloud Auto-Rotation Engine:** A free **GitHub Actions** background daemon that rotates Kaggle GPU sessions every 12 hours automatically in the cloud—**even when your personal PC is powered completely off**.
-3. **One Single Permanent Link:** Powered by **GitHub Pages** (`https://jaimiltrived.github.io/vps/`), ensuring your access address never changes.
-4. **Built-in Local AI Engine:** Pre-installed **LLaMA 3.2** powered by Ollama running on custom port **`8008`** with full OpenAI-compatible API endpoints.
-
----
-
-## ⚡ Supercluster Specifications
-
-| Resource | Single Instance | **4-Node Supercluster Capacity** |
-| :--- | :--- | :--- |
-| **GPU Acceleration** | 2x NVIDIA Tesla T4 | **8x Tesla T4 GPUs (Rotating Pool)** |
-| **GPU VRAM** | 16 GB × 2 = 32 GB | **Dual T4 Active with Layer Offloading** |
-| **System Memory** | 31.35 GB RAM | **125.4 GB Combined RAM Pool** |
-| **Compute Cores** | 4 vCPUs | **16 vCPUs Combined Pool** |
-| **Storage Capacity**| 20 GB Scratch | **160 GB Unified Cluster Storage** |
-| **AI LLM Engine** | - | **LLaMA 3.2 on Custom Port 8008** |
-| **Uptime** | 12 Hours Max | **24/7 Continuous (Zero Local PC Required)** |
-| **Cost** | Free | **$0.00 Forever** |
+1. **⚡ Google Colab GPU Node**: On-demand **NVIDIA Tesla T4 GPU (16 GB VRAM)** with built-in Anti-Idle keep-alive heartbeats.
+2. **🐳 Cloud Docker Container Node**: 24/7 web hosting with zero local hardware requirements.
+3. **💻 Bare-Metal Host Engine**: Instant local execution with secure Cloudflare tunneling when offline.
+4. **🔒 Cyber-Security Firewall**: Master password gateway (`vpsadmin123`) with anti-brute force IP locking.
 
 ---
 
-## 🏗️ System Architecture
+## 🎛️ The Smart Switch Interface Architecture
+
+The system features a real-time compute switcher that allows you to route tasks dynamically across available infrastructure without interrupting active work:
 
 ```mermaid
 flowchart TD
-    User["🌍 User (Phone / PC / Tablet)"] --> Gateway["📌 Permanent Link: https://jaimiltrived.github.io/vps/"]
-    Gateway --> Tunnel["⚡ Cloudflare Secure HTTPS Tunnel"]
+    User["👤 Developer / User"] -->|Browser / HTTPS| Gate["🛡️ Security Firewall Gateway"]
+    Gate -->|Master Password Auth| Cockpit["🎛️ Master Control Cockpit (FastAPI + Xterm.js)"]
     
-    subgraph Cloud["☁️ Free 24/7 Cloud Orchestration (GitHub Actions)"]
-        Cron["⏰ 12-Hour Cron Scheduler"] --> Rotator["🔄 Auto-Rotation Engine (rotate.py)"]
-        Rotator --> KaggleAPI["🔑 Kaggle Cloud API"]
+    subgraph SwitchEngine ["⚡ Smart Compute Switch Interface"]
+        Cockpit --> S1["Node 1: Google Colab\n(NVIDIA Tesla T4 • 16GB VRAM)"]
+        Cockpit --> S2["Node 2: Cloud Docker\n(24/7 Permanent Container)"]
+        Cockpit --> S3["Node 3: Bare-Metal Host\n(16 Threads • 16GB RAM)"]
+        Cockpit --> S4["Node 4: Modal Serverless\n(On-Demand Cloud Functions)"]
     end
-    
-    subgraph Cluster["🚀 4-Node Kaggle GPU/CPU Supercluster"]
-        KaggleAPI --> Node1["Node 1: jaimiltrivedi (Dual Tesla T4 - Active)"]
-        KaggleAPI --> Node2["Node 2: jaimiltrivedi123 (Standby CPU Pool)"]
-        KaggleAPI --> Node3["Node 3: kripal12121 (Standby CPU Pool)"]
-        KaggleAPI --> Node4["Node 4: kripalmisan (Standby CPU Pool)"]
-    end
-    
-    Node1 --> Cockpit["🖥️ Master Web Cockpit (Port 8000)"]
-    Node1 --> AI["🤖 LLaMA 3.2 AI Server (Port 8008)"]
-    Cockpit --> Tunnel
-```
 
----
-
-## 🤖 Built-in LLaMA 3.2 AI Server (Port 8008)
-
-The VPS automatically boots **Ollama** on custom port **`8008`** and loads **LLaMA 3.2** onto the Dual Tesla T4 GPUs with full OpenAI compatibility:
-
-### Python Integration
-```python
-from openai import OpenAI
-
-# Connect to your Kaggle VPS AI Endpoint
-client = OpenAI(
-    base_url="https://<YOUR_TUNNEL_URL>/v1",
-    api_key="ollama"  # Required placeholder
-)
-
-response = client.chat.completions.create(
-    model="llama3.2:1b",
-    messages=[
-        {"role": "system", "content": "You are my 24/7 personal cloud VPS AI assistant."},
-        {"role": "user", "content": "Explain how distributed GPU clustering works in 2 sentences."}
-    ]
-)
-
-print(response.choices[0].message.content)
-```
-
-### Direct cURL Request
-```bash
-curl -X POST https://<YOUR_TUNNEL_URL>/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "llama3.2:1b",
-    "messages": [{"role": "user", "content": "Hello LLaMA 3.2!"}]
-  }'
+    S1 --> AI["🤖 LLaMA 3.2 AI & Deep Learning"]
+    S2 --> Web["🌐 Web Apps & Background Daemons"]
+    S3 --> Storage["📁 NVMe SSD Fast File Management"]
 ```
 
 ---
 
 ## 🚀 Key Features
 
-* **🖥️ Master Web Cockpit:** Single-page real-time dashboard featuring live GPU/CPU/RAM telemetry, active session countdown, and dark glassmorphic UI.
-* **⌨️ Multi-Tab Web Terminal:** Full root `bash` shell powered by **Xterm.js** and Linux PTY websockets with color support and copy-paste.
-* **📁 Cloud File Manager:** In-browser code editor (Ace Editor), directory browser, upload/download capabilities, and 1-click `.zip` backup downloads.
-* **📦 1-Click App Store:** Instant launcher for **VS Code Server**, **JupyterLab**, **Ollama**, and **Streamlit**.
-* **🛡️ Keep-Alive Heartbeat:** Built-in audio beacon and persistent websocket heartbeat to prevent Kaggle's 30-minute idle disconnects.
-* **🌐 Single Permanent Address:** Always access via `https://jaimiltrived.github.io/vps/`.
+* **🖥️ Multi-Tab Web Terminal (Xterm.js)**: Full Linux/Bash root terminal directly in your web browser with resize detection and color support.
+* **📁 Visual File Manager & Ace Editor**: Browse directories, edit code with syntax highlighting, upload datasets, and download `.zip` backups.
+* **🎮 NVIDIA GPU Acceleration**: 1-click launch of Tesla T4 GPUs with real-time VRAM monitoring, temperature tracking, and cache purging.
+* **🛡️ Security Firewall & Protection**: Master password protection with automated IP lockout after 5 consecutive failed attempts.
+* **🌐 Port Forwarding & Cloudflare Tunnels**: Expose any internal port (FastAPI, Streamlit, JupyterLab, Ollama) to a public HTTPS URL with 1 click.
+* **🔋 0% Laptop Hardware Required**: Runs 100% inside Google Cloud's datacenter.
 
 ---
 
-## 🛠️ Quickstart Guide
+## 👥 How to Use with YOUR OWN Account (For Anyone)
 
-### 1. Fork or Clone this Repository
+This repository is **100% multi-tenant and secure**. It contains **zero private tokens or personal credentials**, meaning anyone can fork and use it with their own accounts for $0:
+
+### 1-Click Launch on Google Colab:
+1. Click the **[Open in Colab](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)** button above.
+2. Sign in with **your own personal Google account**.
+3. Click **Runtime ➔ Run all** (`Ctrl + F9`).
+4. Google Colab will allocate your private **Tesla T4 GPU (16 GB)** and generate your private URL.
+5. Enter master password: `vpsadmin123` to unlock.
+
+### Running via Git / Local:
 ```bash
+# 1. Clone the repository
 git clone https://github.com/jaimiltrived/vps.git
 cd vps
+
+# 2. Install dependencies
+pip install -r requirements.txt # or: pip install fastapi uvicorn psutil websockets requests
+
+# 3. Start the VPS Cockpit
+python server.py
 ```
 
-### 2. Configure Kaggle Credentials
-Add your Kaggle account usernames and API tokens in `rotate.py` or as GitHub Repository Secrets:
-* `KAGGLE_USERNAME`
-* `KAGGLE_KEY`
+---
 
-### 3. Enable GitHub Pages & Actions
-1. Go to **Settings $\to$ Pages** in your repo:
-   - Source: **Deploy from a branch**
-   - Branch: **`main`** $\to$ Click **Save**.
-2. Go to the **Actions** tab:
-   - Enable workflows to allow the 12-hour auto-rotation cron to run 24/7.
+## 📊 Specifications Matrix
+
+| Metric | Google Colab Node | Bare-Metal Node | Cloud Container Node |
+| :--- | :--- | :--- | :--- |
+| **GPU Compute** | **NVIDIA Tesla T4 (16 GB)** | Local Graphics | Cloud Shared |
+| **System Memory** | **13 GB Cloud RAM** | **16 GB Physical RAM** | **16 GB Container Pool** |
+| **Storage** | **80 GB Cloud Disk** | **500 GB NVMe SSD** | **50 GB Cloud Storage** |
+| **Terminal Access** | Root Linux Bash (PTY) | Host Shell (CMD/PowerShell) | Linux Docker Bash |
+| **Security** | Master Password Gate | Firewall Active | Auth Token Required |
+| **Cost** | **$0.00 Free** | **$0.00 Free** | **$0.00 Free** |
 
 ---
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/jaimiltrived/vps/issues).
-
----
-
-## ⭐ Show Your Support
-
-If this project helped you run a 24/7 free cloud VPS with Dual Tesla T4 GPUs, **please give it a ⭐ star on GitHub!** It helps more developers discover this project on Google and GitHub Trending!
-
-<div align="center">
-
-[![Star on GitHub](https://img.shields.io/github/stars/jaimiltrived/vps?style=social)](https://github.com/jaimiltrived/vps)
-
-**Maintained by [@jaimiltrived](https://github.com/jaimiltrived)**
-
-</div>
+## 📄 License
+This project is open-source under the **[MIT License](LICENSE)**. Feel free to star ⭐, fork 🍴, and use it in your own projects!
