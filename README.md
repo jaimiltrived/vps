@@ -105,5 +105,25 @@ python server.py
 
 ---
 
+## 💡 Why This Project? (Free vs Paid VPS)
+
+| Feature | Standard Cloud VPS (AWS / DigitalOcean) | **Tri-Cloud Hybrid VPS** |
+| :--- | :--- | :--- |
+| **NVIDIA GPU (16 GB VRAM)** | ~$0.60–$1.20 / hour (~$400/mo) | **$0.00 (Free via Colab)** |
+| **Web Terminal & PTY** | Requires SSH setup / PuTTY | **Built-in Web Terminal (Xterm.js)** |
+| **File Manager UI** | SFTP client required | **Built-in Visual Browser & Ace Editor** |
+| **Security Firewall** | Manual UFW configuration | **Built-in Password Gate & Brute-Force Shield** |
+| **Local Hardware Impact** | 0% | **0% (Runs in Cloud Datacenter)** |
+
+---
+
+## ⭐ Star History
+
+If you find this project useful, please consider giving it a star ⭐! It helps the community discover free cloud compute!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jaimiltrived/vps&type=Date)](https://star-history.com/#jaimiltrived/vps&Date)
+
+---
+
 ## 📄 License
 This project is open-source under the **[MIT License](LICENSE)**. Feel free to star ⭐, fork 🍴, and use it in your own projects!
