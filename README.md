@@ -1,10 +1,11 @@
 <div align="center">
 
-# 🚀 Kaggle 24/7 Cloud Supercluster VPS
-### *Turn Kaggle into a 100% Free 24/7 Cloud Supercomputer with Dual Tesla T4 GPUs, 120 GB RAM, and LLaMA 3.2 AI*
+# 🚀 100% Free Cloud VPS Supercomputer
+### *Runs in Google Cloud with Tesla T4 GPU (16 GB VRAM), 13 GB RAM, Root Linux Terminal & Security Firewall*
 
-[![Permanent Live Demo](https://img.shields.io/badge/Live%20Demo-jaimiltrived.github.io%2Fvps-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://jaimiltrived.github.io/vps/)
-[![Kaggle Dual T4](https://img.shields.io/badge/Hardware-Dual%20Tesla%20T4%20(30GB%20VRAM)-76b900?style=for-the-badge&logo=nvidia&logoColor=white)](https://www.kaggle.com)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)
+[![Permanent Live Gateway](https://img.shields.io/badge/Live%20Gateway-jaimiltrived.github.io%2Fvps-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://jaimiltrived.github.io/vps/)
+[![Tesla T4 GPU](https://img.shields.io/badge/Hardware-Tesla%20T4%20(16GB%20VRAM)-76b900?style=for-the-badge&logo=nvidia&logoColor=white)](https://colab.research.google.com/github/jaimiltrived/vps/blob/main/Cloud_VPS_Server.ipynb)
 [![RAM Pool](https://img.shields.io/badge/Memory-120%20GB%20Cluster%20RAM-06b6d4?style=for-the-badge)](https://jaimiltrived.github.io/vps/)
 [![Automation](https://img.shields.io/badge/24%2F7%20Cloud%20Rotation-GitHub%20Actions-22c55e?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/jaimiltrived/vps/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg?style=for-the-badge)](LICENSE)
