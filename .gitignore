@@ -1,0 +1,8 @@
+# Security: Never commit tokens or secrets
+modal_secrets.json
+kaggle_accounts.json
+*.token
+*.key
+.env
+__pycache__/
+*.log
