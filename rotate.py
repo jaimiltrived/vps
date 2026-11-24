@@ -6,37 +6,44 @@ import urllib.request
 from pathlib import Path
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-ACCOUNTS = [
-    {
-        "username": "jaimiltrivedi",
-        "token": "KGAT_672d08c43ff869eb2c9c52c71b4042a9",
-        "slug": "vps-master-jaimil"
-    },
-    {
-        "username": "jaimiltrivedi123",
-        "token": "KGAT_8bfdb60bc4e95268ee6b2abccd7aa6c9",
-        "slug": "vps-node-2"
-    },
-    {
-        "username": "kripal12121",
-        "token": "KGAT_c23cd7af442d6760d433f1749c7c75ca",
-        "slug": "vps-node-3"
-    },
-    {
-        "username": "kripalmisan",
-        "token": "KGAT_d680a4a91c6ac9ee6aab918d0e987267",
-        "slug": "vps-node-4"
-    }
-]
+def load_accounts():
+    """
+    Loads accounts safely from:
+    1. GitHub Secret / Environment Variable: KAGGLE_ACCOUNTS_JSON
+    2. Local file: kaggle_accounts.json (if running locally)
+    """
+    env_json = os.environ.get("KAGGLE_ACCOUNTS_JSON")
+    if env_json:
+        try:
+            data = json.loads(env_json)
+            accounts = data.get("accounts", []) if isinstance(data, dict) else data
+            if accounts:
+                return accounts
+        except Exception as e:
+            print(f"[!] Error parsing KAGGLE_ACCOUNTS_JSON: {e}")
+
+    # Fallback to local file for local testing
+    local_file = Path("kaggle_accounts.json")
+    if local_file.exists():
+        try:
+            data = json.loads(local_file.read_text(encoding="utf-8"))
+            return data.get("accounts", []) if isinstance(data, dict) else data
+        except Exception:
+            pass
+
+    print("[!] No Kaggle accounts configured. Please add KAGGLE_ACCOUNTS_JSON in GitHub Secrets.")
+    return []
 
 def check_account(acc):
-    token = acc["token"]
-    username = acc["username"]
-    slug = acc["slug"]
+    token = acc.get("token") or acc.get("kaggle_token")
+    username = acc.get("username") or acc.get("kaggle_username")
+    slug = acc.get("slug") or acc.get("notebook_slug", f"vps-master-{username}")
+    
     os.environ["KAGGLE_API_TOKEN"] = token
     kaggle_dir = Path.home() / ".kaggle"
     kaggle_dir.mkdir(parents=True, exist_ok=True)
     (kaggle_dir / "access_token").write_text(token, encoding="utf-8")
+    
     api = KaggleApi()
     api.authenticate()
     st = api.kernels_status(f"{username}/{slug}")
@@ -44,17 +51,28 @@ def check_account(acc):
     return "RUNNING" in status_str
 
 def deploy_account(acc):
-    token = acc["token"]
-    username = acc["username"]
-    slug = acc["slug"]
+    token = acc.get("token") or acc.get("kaggle_token")
+    username = acc.get("username") or acc.get("kaggle_username")
+    slug = acc.get("slug") or acc.get("notebook_slug", f"vps-master-{username}")
+    
     os.environ["KAGGLE_API_TOKEN"] = token
     kaggle_dir = Path.home() / ".kaggle"
     kaggle_dir.mkdir(parents=True, exist_ok=True)
     (kaggle_dir / "access_token").write_text(token, encoding="utf-8")
+    
     api = KaggleApi()
     api.authenticate()
     print(f"[*] Deploying to Kaggle Cloud under {username}/{slug}...")
-    api.kernels_push(f"node_{username}")
+    
+    node_dir = Path(f"node_{username}")
+    if not node_dir.exists():
+        # Fallback to template if folder for this user doesn't exist
+        for candidate in Path(".").glob("node_*"):
+            if candidate.is_dir():
+                node_dir = candidate
+                break
+                
+    api.kernels_push(str(node_dir))
     print(f"[✓] Deployed {username} successfully!")
 
 def poll_latest_tunnel():
@@ -93,20 +111,25 @@ def update_index_html(new_url):
     print(f"[✓] Updated index.html with new live URL: {new_url}")
 
 if __name__ == "__main__":
-    # Check if any is running
+    accounts = load_accounts()
+    if not accounts:
+        print("[!] Exiting: No accounts configured.")
+        sys.exit(0)
+
+    # Check if any account is currently running
     active_acc = None
-    for idx, acc in enumerate(ACCOUNTS):
+    for idx, acc in enumerate(accounts):
+        uname = acc.get("username") or acc.get("kaggle_username")
         try:
             if check_account(acc):
-                print(f"[+] Account {idx+1} ({acc['username']}) is already running!")
+                print(f"[+] Account {idx+1} ({uname}) is already running!")
                 active_acc = acc
                 break
         except Exception as e:
-            print(f"[-] Check {acc['username']} error: {e}")
+            print(f"[-] Check {uname} status: {e}")
 
     if not active_acc:
-        # Deploy first account
-        target = ACCOUNTS[0]
+        target = accounts[0]
         deploy_account(target)
         time.sleep(15)
 

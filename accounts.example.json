@@ -1,0 +1,12 @@
+[
+  {
+    "username": "your_kaggle_username_1",
+    "token": "KGAT_your_api_token_here",
+    "slug": "vps-master-node-1"
+  },
+  {
+    "username": "your_kaggle_username_2",
+    "token": "KGAT_your_api_token_here",
+    "slug": "vps-node-2"
+  }
+]
